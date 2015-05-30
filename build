@@ -1,0 +1,10 @@
+#!/bin/bash
+
+subdirs="ethereum-rlp ethereum-util ethereum-merkle-patricia-db ethereum-encryption ethereum-data-sql ethereum-client-haskell"
+
+for i in $subdirs
+do
+	cd $i
+	cabal install --force-reinstalls
+	cd ..
+done
