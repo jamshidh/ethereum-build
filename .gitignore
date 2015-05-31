@@ -1,1 +1,9 @@
 *~
+.repo
+ethereum-rlp
+ethereum-client-haskell
+ethereum-data-sql
+ethereum-encryption
+ethereum-merkle-patricia
+ethereum-merkle-patricia-db
+ethereum-util
