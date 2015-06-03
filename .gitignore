@@ -7,4 +7,6 @@ ethereum-encryption
 ethereum-merkle-patricia
 ethereum-merkle-patricia-db
 ethereum-util
+hserver-eth
+p2p-server
 work
