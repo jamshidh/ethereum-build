@@ -23,6 +23,10 @@ cp build/bin/geth ../upload/bin/
 cd ..
 
 cp ../ethereum-client-haskell/dist/build/ethereumH/ethereumH upload/bin/
+cp ../hserver-eth/dist/build/api/api upload/bin/
+cp -a ../hserver-eth/static upload/
+cp -a ../hserver-eth/config upload/
+cp ../bashrc2 upload/bashrc2
 cp ../setup upload/bin/
 
 rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress upload/* root@stablenet.blockapps.net:~/

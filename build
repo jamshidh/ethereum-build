@@ -1,6 +1,6 @@
 #!/bin/bash
 
-subdirs="ethereum-rlp ethereum-util ethereum-merkle-patricia-db ethereum-encryption ethereum-data-sql ethereum-client-haskell"
+subdirs="ethereum-rlp ethereum-util ethereum-merkle-patricia-db ethereum-encryption ethereum-data-sql hminer ethereum-client-haskell hserver-eth"
 
 for i in $subdirs
 do

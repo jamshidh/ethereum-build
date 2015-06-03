@@ -8,5 +8,6 @@ ethereum-merkle-patricia
 ethereum-merkle-patricia-db
 ethereum-util
 hserver-eth
+hminer
 p2p-server
 work
