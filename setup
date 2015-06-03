@@ -1,0 +1,12 @@
+
+#apt-get update
+
+apt-get -y install libpq-dev postgresql postgresql-client libleveldb-dev
+
+cd /tmp
+
+sudo -u postgres psql -U postgres -d postgres -c "alter user postgres with password 'api';"
+
+sudo -u postgres createdb eth 2> /dev/null || echo "database already exists"
+
+echo "setup finished"

@@ -1,0 +1,28 @@
+
+set -e
+
+mkdir -p work
+
+cd work
+
+if [ ! -e go-ethereum ]
+then
+	git clone https://github.com/ethereum/go-ethereum.git
+fi
+
+cp -a ../genesis.go go-ethereum/core/
+
+cd go-ethereum
+
+make
+
+mkdir -p ../upload/bin
+
+cp build/bin/geth ../upload/bin/
+
+cd ..
+
+cp ../ethereum-client-haskell/dist/build/ethereumH/ethereumH upload/bin/
+cp ../setup upload/bin/
+
+rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress upload/* root@stablenet.blockapps.net:~/
