@@ -5,3 +5,6 @@ export APPROOT=""
 
 export PGUSER=postgres
 export PGPASS=api
+
+export PATH=$PATH:~/bin/
+export LD_LIBRARY_PATH=$PATH:~/lib/

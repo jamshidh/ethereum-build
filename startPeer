@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while true
+do
+	ethereumH 0 30304 >> ethlog
+	sleep 10
+done

@@ -1,0 +1,19 @@
+
+set -e
+
+mkdir -p work
+
+cd work
+
+if [ ! -e go-ethereum ]
+then
+	git clone https://github.com/ethereum/go-ethereum.git
+fi
+
+cp -a ../genesis.go go-ethereum/core/
+
+cd go-ethereum
+
+make
+
+cp build/bin/geth ../upload/bin/
