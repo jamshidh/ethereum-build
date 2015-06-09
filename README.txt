@@ -6,3 +6,5 @@ postgres) and finally build (which itself calls cabal-install).
 
 In the future, use "repo sync" to update ethereumH. Beware of making changes
 in detached head state.
+
+Running autobuild from a brand new machine may take a while.
