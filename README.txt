@@ -1,5 +1,5 @@
 Running autobuild will build ethereumH in this directory and should work
-seamlessly on Ubuntu.
+seamlessly on Ubuntu. Debian is also reported to work.
 
 Autobuild sets up the development environment, then calls setup (which sets up
 postgres) and finally build (which itself calls cabal-install).
