@@ -11,5 +11,6 @@ cp -a hserver-eth/config work/upload/
 cp bashrc2 work/upload/bashrc2
 cp setup work/upload/bin/
 cp startPeer work/upload/bin/
+cp stopPeer work/upload/bin/
 
 rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress work/upload/* root@stablenet.blockapps.net:~/

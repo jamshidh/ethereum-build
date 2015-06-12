@@ -1,7 +1,15 @@
 #!/bin/bash
 
-while true
-do
-	ethereumH 0 30304 >> ethlog
-	sleep 10
-done
+mkdir -p ~/logs
+
+nohup p2p-server >> ~/logs/p2p-server 2>&1 &
+
+nohup api >> ~/logs/api.log 2>&1 &
+
+nohup ethereumH 0 >> ~/logs/ethereumH.log 2>&1 &
+
+#while true
+#do
+#	ethereumH 0 >> ~/logs/ethereumH.log
+#	sleep 10
+#done
