@@ -1,10 +1,13 @@
 #!/bin/bash
 
+set -e
+
 subdirs="ethereum-rlp ethereum-util ethereum-merkle-patricia-db ethereum-encryption ethereum-data-sql hminer ethereum-client-haskell p2p-server hserver-eth"
 
 for i in $subdirs
 do
 	cd $i
-	cabal install --force-reinstalls
+	echo "====[$i]==============="
+	cabal install -j --force-reinstalls
 	cd ..
 done

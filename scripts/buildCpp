@@ -18,7 +18,7 @@ mkdir -p build
 
 cd build
 
-cmake .. -DGUI=0 -DJSONRPC=0
+cmake .. -DGUI=0 # -DJSONRPC=0 -DMINER=0 -DETHKEY=0 -DSERPENT=0 -DTOOLS=0 -DTESTS=0
 
 make -j 4
 
