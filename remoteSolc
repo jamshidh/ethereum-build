@@ -1,0 +1,4 @@
+
+src=`cat`
+
+curl -d "src=$src" http://stablenet.blockapps.net/solc
