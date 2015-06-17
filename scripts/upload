@@ -10,6 +10,7 @@ cp -a hserver-eth/static work/upload/
 cp -a hserver-eth/config work/upload/
 cp bashrc2 work/upload/bashrc2
 cp setup work/upload/bin/
+cp ethReset work/upload/bin/
 cp startPeer work/upload/bin/
 cp stopPeer work/upload/bin/
 
