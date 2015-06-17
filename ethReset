@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf .ethereumH/
+
+sudo -u postgres dropdb eth
+sudo -u postgres createdb eth
