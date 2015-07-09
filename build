@@ -2,7 +2,7 @@
 
 set -e
 
-subdirs="ethereum-rlp ethereum-util ethereum-merkle-patricia-db ethereum-encryption ethereum-data-sql hminer ethereum-client-haskell p2p-server hserver-eth"
+subdirs="ethereum-rlp ethereum-util ethereum-merkle-patricia-db ethereum-encryption ethereum-data-sql hminer ethereum-client-haskell p2p-server solidity-abi hserver-eth"
 
 for i in $subdirs
 do
