@@ -2,11 +2,13 @@
 .repo
 ethereum-rlp
 ethereum-client-haskell
+ethereum-vm
 ethereum-data-sql
 ethereum-encryption
 ethereum-merkle-patricia
 ethereum-merkle-patricia-db
 ethereum-util
+solidity-abi
 hserver-eth
 hminer
 p2p-server
