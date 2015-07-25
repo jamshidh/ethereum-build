@@ -2,12 +2,5 @@
 
 set -e
 
-subdirs="ethereum-rlp ethereum-util ethereum-merkle-patricia-db ethereum-encryption ethereum-data-sql hminer ethereum-client-haskell p2p-server solidity-abi hserver-eth"
+cabal install -j --force-reinstalls ./ethereum-rlp ./ethereum-util ./ethereum-merkle-patricia-db ./ethereum-encryption ./ethereum-data-sql ./hminer ./ethereum-client-haskell ./p2p-server ./solidity-abi ./hserver-eth --constraint=vector==0.10.12.3
 
-for i in $subdirs
-do
-	cd $i
-	echo "====[$i]==============="
-	cabal install -j --force-reinstalls
-	cd ..
-done
