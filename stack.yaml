@@ -9,6 +9,8 @@ packages:
 - ethereum-encryption/
 - ethereum-vm/
 - ethereum-util/
+- hserver-eth/
+- p2p-server/
 extra-deps: 
 - Crypto-4.2.5.1
 - SHA2-0.2.5
