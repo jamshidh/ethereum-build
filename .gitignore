@@ -1,4 +1,6 @@
 *~
+.*
+.stack_work
 .repo
 ethereum-rlp
 ethereum-client-haskell
