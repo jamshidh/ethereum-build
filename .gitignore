@@ -2,6 +2,7 @@
 .*
 .stack_work
 .repo
+.stack-work
 ethereum-rlp
 ethereum-client-haskell
 ethereum-vm
