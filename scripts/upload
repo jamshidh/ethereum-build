@@ -1,11 +1,25 @@
 
 set -e
 
+if [ "$1" == "" ]
+then
+	echo "usage: upload <server>"
+	exit 1
+fi
+
 mkdir -p work/upload/bin
 
-cp ethereum-client-haskell/dist/build/ethereumH/ethereumH work/upload/bin/
-cp hserver-eth/dist/build/api/api work/upload/bin/
-cp p2p-server/dist/build/p2p-server/p2p-server work/upload/bin/
+cp .stack-work/install/x86_64-linux/lts-2.15/7.8.4/bin/ethereumH work/upload/bin/
+cp .stack-work/install/x86_64-linux/lts-2.15/7.8.4/bin/api work/upload/bin/
+cp .stack-work/install/x86_64-linux/lts-2.15/7.8.4/bin/p2p-server work/upload/bin/
+cp .stack-work/install/x86_64-linux/lts-2.15/7.8.4/bin/ethereumH work/upload/bin/
+cp .stack-work/install/x86_64-linux/lts-2.15/7.8.4/bin/ethereumH work/upload/bin/
+cp .stack-work/install/x86_64-linux/lts-2.15/7.8.4/bin/ethereumH work/upload/bin/
+cp .stack-work/install/x86_64-linux/lts-2.15/7.8.4/bin/ethereum-vm work/upload/bin/
+
+cp work/go-ethereum/build/bin/geth work/upload/bin/
+
+cp genesis.json work/upload/
 cp -a hserver-eth/static work/upload/
 cp -a hserver-eth/config work/upload/
 cp bashrc2 work/upload/bashrc2
@@ -14,4 +28,4 @@ cp ethReset work/upload/bin/
 cp startPeer work/upload/bin/
 cp stopPeer work/upload/bin/
 
-rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress work/upload/* root@stablenet.blockapps.net:~/
+rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress work/upload/* root@$1:~/
