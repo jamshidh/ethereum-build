@@ -21,4 +21,5 @@ extra-deps:
 - nibblestring-0.0.3
 - pbkdf-1.1.1.1
 - text-1.1.1.4
+- yesod-raml-0.1.0
 resolver: lts-2.15
