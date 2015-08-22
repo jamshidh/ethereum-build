@@ -15,4 +15,5 @@ solidity-abi
 hserver-eth
 hminer
 p2p-server
+ethereum-query
 work
